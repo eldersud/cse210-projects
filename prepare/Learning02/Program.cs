@@ -20,7 +20,7 @@ class Program
         myResume._name="Elder Cuases";
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
-        myResume.DisplayJobDetails();
+        myResume.DisplayResume();
 
         
     }
