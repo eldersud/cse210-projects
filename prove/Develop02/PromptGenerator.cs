@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-public class PromtGenerator
+public class PromptGenerator
 {
   public string DisplayPrompot(){
        int npreguntas = 1;

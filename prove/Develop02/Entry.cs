@@ -1,22 +1,24 @@
 using System;
-public class Entry
-{
-    public string _response;
-    public int _date;
-
-    public string DisplayEntry()
+class Entry
     {
-        Console.WriteLine("\n");
-        Console.WriteLine("Answer: ");
-        string _response=Console.ReadLine();
-        
+        private List<string> _entry = new List<string>();
 
-        DateTime theCurrentTime = DateTime.Now;
-        string dateText = theCurrentTime.ToShortDateString();
+        public void memoryTemp(String promt, string response, String dateCurrent) {
+            _entry.Add($"{dateCurrent} - Prompt: {promt}");
+            _entry.Add(response);
+            _entry.Add("");
+        }
 
-        
+        public void Display()
+        {
+            foreach (string item in _entry)
+                {
+                    Console.WriteLine(item);
+                }
+        }
 
-        return (_response);
-
+        public List<string> GetList()
+        {
+            return _entry;
+        }
     }
-}
